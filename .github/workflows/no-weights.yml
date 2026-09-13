@@ -1,0 +1,21 @@
+name: no-weights
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recusar pesos, vídeos e datasets no git
+        run: |
+          set -euo pipefail
+          bad=$(git ls-files | grep -Ei '\.(pt|pth|onnx|engine|ckpt|safetensors|mp4|avi|mkv|mov|webm)$' || true)
+          if [ -n "$bad" ]; then
+            echo "Estes ficheiros não podem ir para o GitHub:"
+            echo "$bad"
+            exit 1
+          fi
+          echo "OK: nenhum peso/vídeo versionado."

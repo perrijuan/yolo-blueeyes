@@ -1,0 +1,20 @@
+# Late Fusion DS-WBF — limiares (não alterar sem re-validar)
+imgsz: 640
+conf_a: 0.15
+conf_b: 0.15
+softnms_sigma: 0.5
+softnms_iou: 0.50
+softnms_min: 0.05
+wbf_iou_thr: 0.55
+dst_match_iou: 0.35
+dst_rel_a: 0.95
+dst_rel_b: 0.60
+dst_conflict_keep_both: 0.55
+tracker: botsort
+track_det_thresh: 0.25
+track_per_class: true
+fovea: true
+fovea_max_area: 6400
+fovea_scale: 1.8
+active_class_ids: [0, 1, 4]
+class_names: [swimmer, boat, jetski, buoy, life_saving_appliances]

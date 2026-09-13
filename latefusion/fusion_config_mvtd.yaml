@@ -1,0 +1,20 @@
+# Late fusion MVTD — A domínio (YOLOv8s fine-tune) + B YoloOW
+# Classes MVTD: boat, ship, sailboat, usv
+# YoloOW só contribui boat (id 5 → 0). ship/sailboat/usv ficam A-only.
+
+imgsz_a: 1280
+imgsz_b: 640
+conf_a: 0.15
+conf_b: 0.15
+softnms_sigma: 0.5
+softnms_iou: 0.50
+softnms_min: 0.05
+wbf_iou_thr: 0.55
+dst_match_iou: 0.35
+dst_rel_a: 0.95
+dst_rel_b: 0.60
+dst_conflict_keep_both: 0.55
+active_class_ids: [0, 1, 2, 3]
+class_names: [boat, ship, sailboat, usv]
+# YoloOW (7 cls Sea): ignored, swimmer, floater, swimmer_on_boat, floater_on_boat, boat, life_jacket
+yoloow_to_mvtd: {5: 0}

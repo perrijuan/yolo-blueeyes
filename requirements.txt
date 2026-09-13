@@ -1,0 +1,19 @@
+# Late fusion + fine-tune YOLO-SEA (Ultralytics) + YoloOW (YOLOv7-style)
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision
+numpy>=1.23.0
+opencv-python>=4.1.1
+Pillow>=7.1.2
+PyYAML>=5.3.1
+scipy>=1.4.1
+tqdm>=4.41.0
+pandas>=1.1.4
+matplotlib>=3.2.2
+seaborn>=0.11.0
+scikit-learn>=1.0
+ensemble-boxes>=1.0.0
+boxmot>=10.0.0
+tensorboard>=2.4.1
+thop
+psutil

@@ -1,0 +1,116 @@
+# =============================================================================
+# O que NÃO sobe para o GitHub
+# Pesos, datasets, vídeos, caches, venv e o clone local do YoloOW.
+# Código, configs YAML, scripts e documentação SOBEM.
+# =============================================================================
+
+# --- Python / ambiente ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.python-version
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+*.ipynb
+
+# --- Pesos e checkpoints (NUNCA commitar) ---
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+*.tflite
+*.mlmodel
+*.param
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.joblib
+*.pt.bak
+*.pt.tmp
+last.pt
+best.pt
+epoch*.pt
+
+# --- Datasets e mídia bruta ---
+datasets/
+data/images/
+data/labels/
+**/images/
+**/labels/
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.jpg
+!docs/**/*.jpeg
+!docs/**/*.png
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.gif
+!docs/**/*.gif
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.webm
+*.part.mp4
+*.cache
+*.npy
+labels.cache
+train.cache
+val.cache
+
+# --- Saídas de treino / eval / tracking ---
+runs/
+metricas/
+videos/
+tracking/
+plots_artigo/
+plots_tracking_blocks/
+paper_compare/
+hota/
+hota_sahi/
+wandb/
+lightning_logs/
+outputs/
+results/
+resultados_*/
+*.log
+events.out.tfevents.*
+
+# --- Clone local do YoloOW (terceiros; ver docs/SETUP.md) ---
+finetune_yoloow/YoloOW/
+finetune_yoloow/YoloOW
+
+# --- IDE / SO ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Secrets ---
+*.pem
+*.key
+credentials.json
+token.json

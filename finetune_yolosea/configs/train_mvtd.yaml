@@ -1,0 +1,39 @@
+# Fine-tune YOLOv8s no MVTD — RTX 3060 6 GB
+# Init: COCO yolov8s.pt (NÃO usar A_yolov8s_seadronessee — classes e domínio diferentes)
+# Splits: test = paper oficial; val = 20% das seq. de treino (por vídeo)
+
+model: pesos/yolov8s.pt
+data: yolo/data.yaml
+imgsz: 1280
+batch: 4
+epochs: 20
+patience: 12
+workers: 2
+optimizer: AdamW
+lr0: 0.0005
+lrf: 0.01
+cos_lr: true
+warmup_epochs: 2.0
+seed: 42
+amp: true
+close_mosaic: 8
+cls: 1.0
+# SOT: stride alto em classes frequentes; sailboat/ship sem stride
+train_stride: 5
+stride_by_class:
+  boat: 5
+  usv: 5
+  ship: 2
+  sailboat: 1
+val_stride: 5
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 5.0
+translate: 0.1
+scale: 0.5
+fliplr: 0.5
+mosaic: 0.5
+mixup: 0.0
+conf: 0.25
+iou: 0.5

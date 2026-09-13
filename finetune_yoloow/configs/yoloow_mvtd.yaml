@@ -1,0 +1,8 @@
+# YoloOW (YOLOv7-style) no MVTD — 4 classes
+# train_mvtd.sh gera uma cópia com caminhos absolutos em runs/yoloow/yoloow_mvtd.yaml
+# Ajuste se correr train.py à mão:
+
+train: REPLACE_WITH_MVTD_YOLO/train_balanced.txt
+val: REPLACE_WITH_MVTD_YOLO/val_stride.txt
+nc: 4
+names: ['boat', 'ship', 'sailboat', 'usv']

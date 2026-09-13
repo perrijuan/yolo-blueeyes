@@ -1,0 +1,26 @@
+# hiperparâmetros de treino — RTX 3060 6 GB
+model: yolov8s.pt
+imgsz: 640
+batch: 8
+epochs: 12
+patience: 4
+workers: 2
+optimizer: AdamW
+lr0: 0.001
+lrf: 0.01
+cos_lr: true
+warmup_epochs: 1.0
+seed: 20
+amp: true
+close_mosaic: 4
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 5.0
+translate: 0.1
+scale: 0.5
+fliplr: 0.5
+mosaic: 0.8
+mixup: 0.05
+conf: 0.15
+iou: 0.5
